@@ -1,14 +1,16 @@
 # NAME
 
-Daioikachan::Client - It's new $module
+Daioikachan::Client - TBD
 
 # SYNOPSIS
 
     use Daioikachan::Client;
 
+    TBD
+
 # DESCRIPTION
 
-Daioikachan::Client is ...
+TBD
 
 # LICENSE
 
@@ -19,4 +21,4 @@ it under the same terms as Perl itself.
 
 # AUTHOR
 
-ryopeko <ryopeko+free@gmail.com>
+ryopeko <ryopeko@gmail.com>
