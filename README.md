@@ -1,3 +1,6 @@
+# Daioikachan::Client
+[![Build Status](https://travis-ci.org/ryopeko/Daioikachan-Client.svg)](https://travis-ci.org/ryopeko/Daioikachan-Client)
+
 # NAME
 
 Daioikachan::Client - TBD
