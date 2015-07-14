@@ -1,8 +1,12 @@
+sudo: false
 language: perl
+install:
+  - cpanm -nq --installdeps --with-develop --with-recommends .
 perl:
-  - "5.12"
-  - "5.14"
-  - "5.16"
-  - "5.18"
   - "5.20"
-
+  - "5.18"
+  - "5.16"
+  - "5.14"
+  - "5.12"
+  - "5.10"
+  - "5.8"
