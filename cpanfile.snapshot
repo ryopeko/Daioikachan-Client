@@ -180,6 +180,48 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Test 0
       perl 5.006
+  Scope-Guard-0.20
+    pathname: C/CH/CHOCOLATE/Scope-Guard-0.20.tar.gz
+    provides:
+      Scope::Guard 0.20
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0
+      perl 5.006001
+  Term-Encoding-0.02
+    pathname: M/MI/MIYAGAWA/Term-Encoding-0.02.tar.gz
+    provides:
+      Term::Encoding 0.02
+    requirements:
+      ExtUtils::MakeMaker 0
+  Test-Pretty-0.31
+    pathname: T/TO/TOKUHIROM/Test-Pretty-0.31.tar.gz
+    provides:
+      App::Prove::Plugin::Pretty undef
+      App::Prove::Plugin::retty undef
+      TAP::Formatter::Pretty::Multi undef
+      TAP::Formatter::Pretty::Multi::Session undef
+      TAP::Formatter::Pretty::Single undef
+      TAP::Formatter::Pretty::Single::Session undef
+      Test::Pretty 0.31
+      Test::Pretty::Harness undef
+      Test::Pretty::Parser undef
+    requirements:
+      Carp 0
+      File::Temp 0
+      Module::Build 0.38
+      Scope::Guard 0
+      TAP::Formatter::Base 0
+      TAP::Formatter::Session 0
+      TAP::Harness 0
+      TAP::Parser 0
+      Term::ANSIColor 3.02
+      Term::Encoding 0
+      Test::Builder 0.82
+      Test::More 0.98
+      autodie 0
+      parent 0
+      perl 5.008001
   Test-Simple-1.001014
     pathname: E/EX/EXODIST/Test-Simple-1.001014.tar.gz
     provides:
