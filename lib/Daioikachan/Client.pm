@@ -5,13 +5,13 @@ use warnings;
 
 our $VERSION = "0.01";
 
-use Furl;
+use Furl::HTTP;
 use Carp;
 
 sub new {
     my ($class, $args) = @_;
 
-    my $ua = Furl->new(
+    my $ua = Furl::HTTP->new(
         agent   => 'daioikachan-agent',
         timeout => 10,
         defined $args->{ua_options} ? %{$args->{ua_options}} : (),
