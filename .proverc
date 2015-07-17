@@ -1,3 +1,4 @@
 -Ilib
 -MTest::Pretty
--vw
+-lv
+-PPretty
