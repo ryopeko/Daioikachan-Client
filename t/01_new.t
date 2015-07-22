@@ -6,7 +6,6 @@ use Test::More;
 use Test::Exception;
 
 use Daioikachan::Client;
-use Data::Dumper;
 
 subtest 'new' => sub {
     my $class = 'Daioikachan::Client';
