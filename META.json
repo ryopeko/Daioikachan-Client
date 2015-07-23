@@ -1,7 +1,7 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Client for Daioikachan",
    "author" : [
-      "ryopeko <ryopeko+free@gmail.com>"
+      "ryopeko <ryopeko@gmail.com>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Minilla/v2.4.1, CPAN::Meta::Converter version 2.150005",
@@ -42,16 +42,34 @@
       },
       "runtime" : {
          "requires" : {
+            "Furl" : "0",
             "perl" : "5.008001"
          }
       },
       "test" : {
          "requires" : {
-            "Test::More" : "0.98"
+            "Test::Exception" : "0.40",
+            "Test::Mock::Guard" : "0.10",
+            "Test::More" : "1.001014",
+            "Test::Pretty" : "0.31"
          }
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/ryopeko/Daioikachan-Client/issues"
+      },
+      "homepage" : "https://github.com/ryopeko/Daioikachan-Client",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/ryopeko/Daioikachan-Client.git",
+         "web" : "https://github.com/ryopeko/Daioikachan-Client"
+      }
+   },
    "version" : "0.01",
+   "x_contributors" : [
+      "ryopeko <ryopeko@gmail.com>"
+   ],
    "x_serialization_backend" : "JSON::PP version 2.27203"
 }
