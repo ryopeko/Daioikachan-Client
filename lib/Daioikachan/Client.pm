@@ -17,16 +17,16 @@ sub new {
         defined $args->{ua_options} ? %{$args->{ua_options}} : (),
     );
 
-    my $default_channel      = (defined $args->{default_channel} && ($args->{default_channel} ne '')) ? $args->{default_channel} : '#notify';
-    my $daioikachan_endpoint = (defined $args->{daioikachan_endpoint} && ($args->{daioikachan_endpoint} ne '')) ? $args->{daioikachan_endpoint} : die 'Undefined daioikachan_endpoint';
+    my $default_channel = (defined $args->{default_channel} && ($args->{default_channel} ne '')) ? $args->{default_channel} : '#notify';
+    my $endpoint = (defined $args->{endpoint} && ($args->{endpoint} ne '')) ? $args->{endpoint} : die 'Undefined endpoint';
 
     my $headers = $args->{headers};
 
     return bless {
-        ua      => $ua,
-        headers => $headers,
-        default_channel      => $default_channel,
-        daioikachan_endpoint => $daioikachan_endpoint,
+        ua              => $ua,
+        headers         => $headers,
+        default_channel => $default_channel,
+        endpoint        => $endpoint,
     }, $class;
 }
 
@@ -60,7 +60,7 @@ sub _send {
     my $channel = (defined $args->{channel} && ($args->{channel} ne '')) ? $args->{channel} : $self->{default_channel};
 
     return $self->{ua}->post(
-        $self->{daioikachan_endpoint} . $args->{type},
+        $self->{endpoint} . $args->{type},
         $self->{headers},
         {
             channel => $channel,

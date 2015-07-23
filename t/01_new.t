@@ -13,18 +13,18 @@ subtest 'new' => sub {
     my $endpoint = 'http://daioikachan_endpoint.example.com';
 
     subtest 'valid params' => sub {
-        subtest 'when params has a daioikachan_endpoint' => sub {
-            my $instance = $class->new({ daioikachan_endpoint => $endpoint });
+        subtest 'when params has a endpoint' => sub {
+            my $instance = $class->new({ endpoint => $endpoint });
 
             is ref $instance, $class, "should be $class\'s instance";
-            is $instance->{daioikachan_endpoint}, $endpoint, 'should be equal endpoint';
+            is $instance->{endpoint}, $endpoint, 'should be equal endpoint';
             is ref $instance->{ua}, 'Furl::HTTP', 'should have a user agent of Furl::HTTP';
         };
 
         subtest 'when params has a default_channel' => sub {
             my $default_channel = '#default';
             my $instance = $class->new({
-                    daioikachan_endpoint => $endpoint,
+                    endpoint => $endpoint,
                     default_channel => $default_channel,
                 });
 
@@ -34,7 +34,7 @@ subtest 'new' => sub {
         subtest 'when params has a header for ua' => sub {
             my $headers = [ 'x-test-daioikachan-header' => 'foo' ];
             my $instance = $class->new({
-                    daioikachan_endpoint => $endpoint,
+                    endpoint => $endpoint,
                     headers => $headers,
                 });
 
@@ -44,7 +44,7 @@ subtest 'new' => sub {
         subtest 'when params has a ua_options' => sub {
             my $user_agent = 'test-daioikachan-agent';
             my $instance = $class->new({
-                    daioikachan_endpoint => $endpoint,
+                    endpoint => $endpoint,
                     ua_options => {
                         agent => $user_agent,
                     },
@@ -57,10 +57,10 @@ subtest 'new' => sub {
     };
 
     subtest 'invalid params' => sub {
-        subtest 'when params does not have a daioikachan_endpoint' => sub {
+        subtest 'when params does not have a endpoint' => sub {
             throws_ok {
                 $class->new;
-            } qr/Undefined daioikachan_endpoint/, 'throws undefined daioikachan_endpoint error';
+            } qr/Undefined endpoint/, 'throws undefined endpoint error';
         };
     };
 };

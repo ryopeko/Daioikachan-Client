@@ -13,8 +13,8 @@ subtest '_send' => sub {
     my $headers = [ 'x-test-daioikachan-header' => 'foo' ];
 
     my $instance = Daioikachan::Client->new({
-            daioikachan_endpoint => $endpoint,
-            headers              => $headers,
+            endpoint => $endpoint,
+            headers  => $headers,
         });
 
     my $message = 'foo';
@@ -58,7 +58,7 @@ subtest '_send' => sub {
         is $got->{params}->{message}, $message, 'message should send to channel';
     };
 
-    subtest 'daioikachan_endpoint' => sub {
+    subtest 'endpoint' => sub {
         $instance->_send({
                 message => $message,
                 type    => 'notice',

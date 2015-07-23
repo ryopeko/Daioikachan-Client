@@ -10,7 +10,7 @@ use Daioikachan::Client;
 
 subtest 'privmsg' => sub {
     my $instance = Daioikachan::Client->new({
-            daioikachan_endpoint => 'http://daioikachan_endpoint.example.com',
+            endpoint => 'http://daioikachan_endpoint.example.com',
         });
 
     subtest 'when arguments is not valid' => sub {
